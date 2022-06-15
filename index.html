@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>piano responsive website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" 
+integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        [class*="pr"]{
+            padding: 1rem;
+            background-color:cadetblue;
+            border: 4px solid black;
+            color: #fff;
+
+        }
+        [class*="container"]{
+            border: 1px solid brown;
+            padding: 1rem;
+            background-color: rgb(30, 210, 90);
+
+
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <div class="pr">Piano</div>
+    <div class="container">
+         {% for items in work %}
+         <footer class="footer section">
+            <div class="footer__container bd-grid">
+                <div class="footer__data">
+                    <h2 class="footer__title">LOUIS PASTEUR NSABIMANA</h2>
+                    <p class="footer__text">this is my personal website </p>
+          <div class="card border-info mb-3" style="max-width: 30rem;">
+            
+            <div class="card-header"> {{ items.title}}</div>
+            <div class="card-body">
+                <p class="card-text"> {{ items.description | truncatewords:15}}</p>
+                <h6 class="card-text"> {{ items.technology}}</h6>
+                <div class="about__social">
+                    <a href="#" class="about__social-icon"><i class='bx bxl-linkedin' ></i></a>
+                    <a href="#" class="about__social-icon"><i class='bx bxl-github' ></i></a>
+                    <a href="#" class="about__social-icon"><i class='bx bxl-dribbble' ></i></a>
+                </div>
+                
+                        </div>
+        9
+                       
+                        </div>
+                        <footer class="footer section">
+                            <div class="footer__container bd-grid">
+                        <div class="footer__data">
+                            <h2 class="footer__title">FOLLOW</h2>
+                            <a href="#" class="footer__social"><i class='bx bxl-facebook' ></i></a>
+                            <a href="#" class="footer__social"><i class='bx bxl-instagram' ></i></a>
+                            <a href="#" class="footer__social"><i class='bx bxl-twitter' ></i></a>
+                        </div>
+                <a href="details.html" class="btn btn-outline-secondary"> <button type="button" class="btn btn-danger">in details..</button> </a>
+            
+          </div>
+        {% endfor %}
+        
+
+                
+    </div>
+</center>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+ integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> 
+</body>
+</html>
